@@ -1,0 +1,11 @@
+#!/bin/bash
+sed 's/Zoo//g' pandas.txt > nozoopandas.txt
+sort -k2 pandas.txt | awk '{print$1,$4,$2}'> pandascolumns.txt
+awk '{print $5}' pandas.txt | sort>zoosaresorted.txt
+sed "s/female/F/" pandas.txt | sed "s/male/M/">mfpandas
+grep "female" pandas.txt | grep -c 'October'
+grep -n '^' pandas.txt > numberedpandas
+sed -n '1p;6p;17p' pandas.txt > pandas1617
+grep -i "x" pandas.txt > pandasx
+awk '{ a[$5]++ } END { for (b in a) { print b } }' pandas.txt > uniquelocations
+sort -k4 -n pandas.txt | awk '$4 <= 10' | awk '{print $1, $4}' > under10
